@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.pdf2word.controller.PDF2WordController"
+            stylesheets="@../static/index.css"
+            styleClass="app">
+    <left>
+        <VBox styleClass="sidebar">
+            <ImageView fitHeight="285" fitWidth="230">
+                <Image url="@../static/logo.png"/>
+            </ImageView>
+            <HBox styleClass="toggle-group-box" alignment="CENTER">
+                <ToggleButton fx:id="batchButton" text="批处理" styleClass="source-button, toggle-button-first" toggleGroup="$sourceGroup"/>
+                <ToggleButton fx:id="soleButton" text="单一文件" styleClass="source-button, toggle-button-last" toggleGroup="$sourceGroup"/>
+            </HBox>
+        </VBox>
+    </left>
+    <center>
+        <VBox styleClass="center">
+            <!-- 标题 -->
+            <Text text="PDF To Word" styleClass="center-title"/>
+            <!-- 做一个用于展示提示信息的文本内容 -->
+            <TextArea fx:id="log" styleClass="center-log" promptText="日志信息将显示在这里..."/>
+            <!-- 添加一个进度条展示,用于点击提交之后提示用户转换进度 -->
+            <ProgressBar fx:id="progressBar" styleClass="center-progress-bar" progress="0.0"/>
+            <HBox>
+                <!-- 根据toggle-group-box按钮的选中状态调节是选择文件还是选择文件夹 -->
+                <Button fx:id="selectButton" text="选择文件" styleClass="center-btn-select" onAction="#handleSelectButtonAction"/>
+                <!-- 提交按钮 -->
+                <Button fx:id="submitButton" text="提交" styleClass="center-btn-submit" onAction="#handleSubmitButtonAction"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

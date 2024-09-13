@@ -1,0 +1,122 @@
+/* 全局样式 */
+* {
+    -fx-padding: 20; /* 增加全局填充 */
+    -fx-margin: 20; /* 增加全局边距 */
+}
+
+.app {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #1271C2 0%, #19C284 100%);
+}
+
+/* 侧边栏 */
+.sidebar {
+    -fx-background-color: white;
+    -fx-padding: 0; /* 增加侧边栏内部填充 */
+    -fx-background-radius: 20 0 20 20;
+}
+
+/* 切换按钮组 */
+.toggle-group-box {
+    -fx-spacing: 0; /* 增加按钮之间的间距 */
+}
+
+/* 普通切换按钮和源按钮样式 */
+.source-button {
+    -fx-background-color: #FDFEFD;
+    -fx-text-fill: black;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-min-width: 70px;
+    -fx-min-height: 40px;
+    -fx-background-radius: 5; /* 添加圆角 */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0); /* 添加阴影效果 */
+}
+
+/* 特殊的切换按钮样式 */
+.toggle-button-first {
+    -fx-background-radius: 20 0 0 20;
+}
+
+.toggle-button-last {
+    -fx-background-radius: 0 20 20 0;
+}
+
+/* 选中的切换按钮和源按钮样式 */
+.source-button:selected {
+    -fx-background-color: #19C284;
+    -fx-text-fill: white; /* 选中的按钮文字为白色 */
+}
+
+/* 中心区域 */
+.center {
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #1271C2 0%, #19C284 100%);
+    -fx-padding: 20; /* 增加中心区域内部填充 */
+}
+
+/* 中心标题 */
+.center-title {
+    -fx-font-size: 36px;
+    -fx-font-family: "华文彩云", Arial, sans-serif;
+    -fx-fill: white;
+    -fx-padding: 20 0 20 0; /* 在标题上下增加填充 */
+    -fx-font-weight: bold;
+}
+
+/* 日志区域样式 */
+.center-log {
+    -fx-font-size: 14px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 20;
+    -fx-padding: 10;
+    -fx-background-color: white;
+    -fx-pref-height: 150;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+}
+
+/* 进度条样式 */
+.center-progress-bar {
+    -fx-pref-width: 100%;
+}
+
+/* 定义按钮的样式 */
+.center-btn-select {
+    -fx-background-color: #19C284;
+    -fx-text-fill: white;
+    -fx-padding: 20;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+}
+
+/* 鼠标悬停时的样式 */
+.center-btn-select:hover {
+    -fx-background-color: #43A047;
+}
+
+    /* 提交按钮样式 */
+.center-btn-submit {
+    -fx-background-color: #0D80AA;
+    -fx-text-fill: white;
+    -fx-padding: 20;
+    -fx-border-radius: 50;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+}
+
+.center-btn-submit:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* HBox布局样式 */
+.center > HBox {
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+/* Flex布局样式 */
+.center > HBox, .center > Text, .center > TextArea, .center > ProgressBar {
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+}
